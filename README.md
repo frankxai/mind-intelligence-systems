@@ -6,12 +6,41 @@ This repo is the **canon layer** — not a product itself, but the source of tru
 
 ---
 
+## 🧠 Human Mind Intelligence System — Core Ontology Layer
+
+> **The most important thing to know about this repo**: it houses the **Human Mind Intelligence System (HMIS)** — the canonical ontology for every cognitive, affective, and behavioural construct used across the entire swarm. Every agent prompt, schema, workflow, and domain system that refers to human experience **must** ground its vocabulary here.
+
+The HMIS lives at [`models/human-mind/`](./models/human-mind/) and defines 13 modular constructs. It is not a product — it is the shared language of the swarm.
+
+```
+models/human-mind/
+├── attention.md         ← selective & executive attention
+├── memory.md            ← working, episodic, semantic, procedural
+├── emotion.md           ← affect, appraisal, regulation
+├── motivation.md        ← goal pursuit, self-determination, volition
+├── identity.md          ← self-concept, narrative identity
+├── learning.md          ← acquisition, consolidation, transfer
+├── belief.md            ← epistemic states, revision, bias
+├── behavior.md          ← habit, action, implementation intentions
+├── consciousness.md     ← awareness, self-monitoring
+├── metacognition.md     ← thinking about thinking
+├── decision-making.md   ← dual-process, prospect theory, choice
+├── social-cognition.md  ← theory of mind, norms, intergroup
+└── family-guardians.md  ← care dynamics, relational safety (planned)
+```
+
+**Why this matters**: Without this layer, each sibling repo would name constructs independently, creating drift between what "attention" means in Agentic Mind OS versus the Psychology Research Intelligence System. The HMIS prevents this. It is consumed by **all** repos in the swarm.
+
+See [REPO_MESH.md](./REPO_MESH.md) for the full ontology dependency diagram.
+
+---
+
 ## Purpose
 
-This is the highest node in a swarm of eight repositories. Its job is threefold:
+This is the highest governance node in a swarm of eight repositories. Its job is threefold:
 
 1. **Name things correctly.** The [Naming Doctrine](./NAMING_DOCTRINE.md) defines what OS, System, and Systems mean across the portfolio and prevents drift as repos multiply.
-2. **Hold the shared model.** `models/human-mind/` contains the modular ontology of cognition, affect, and behavior that every agent in the swarm can import as ground truth.
+2. **Hold the shared ontology.** `models/human-mind/` (the HMIS) contains the modular ontology of cognition, affect, and behavior that every agent in the swarm imports as ground truth.
 3. **Map the mesh.** `repo-mesh.yaml` and `REPO_MESH.md` define which repos depend on which, what they provide, and how data flows between them. Any coding agent entering the swarm reads this first.
 
 Without this repo, each sibling would name things independently, model the mind inconsistently, and lose track of how their work relates to neighboring systems. This repo prevents that from happening.
@@ -22,7 +51,7 @@ Without this repo, each sibling would name things independently, model the mind 
 
 | Repo | What it is | Primary Audience |
 |------|-----------|-----------------|
-| **[mind-intelligence-systems](https://github.com/frankxai/mind-intelligence-systems)** *(this repo)* | Umbrella canon, naming, models, governance | Agents and architects |
+| **[mind-intelligence-systems](https://github.com/frankxai/mind-intelligence-systems)** *(this repo)* | Umbrella canon, naming, HMIS ontology, governance | Agents and architects |
 | **[agentic-mind-os](https://github.com/frankxai/agentic-mind-os)** | Personal second-brain OS — lived daily | Individual practitioners |
 | **[research-intelligence-os](https://github.com/frankxai/research-intelligence-os)** | Reusable runtime: contracts, templates, evals | Developers, domain system builders |
 | **[research-intelligence-systems](https://github.com/frankxai/research-intelligence-systems)** | Cross-domain research portfolio layer | Researchers, analysts |
@@ -57,9 +86,9 @@ Start with [awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-
 
 Coding agents (Codex, Claude Code, Gemini, Hermes) entering the swarm should:
 
-1. **Read `repo-mesh.yaml`** — machine-readable mesh: which repos exist, what they depend on, what they provide, and which models are canonical.
+1. **Read `repo-mesh.yaml`** — machine-readable mesh: which repos exist, what they depend on, what they provide, which HMIS modules each consumes, and which models are canonical.
 2. **Read `AGENTS.md`** — agent-specific guidance for working in this repo without violating governance.
-3. **Scan `models/human-mind/`** — each module file (`attention.md`, `memory.md`, etc.) contains: Definition, Key Processes, Related Constructs, Research Notes, and Agent Prompts. These are reusable in any agent system prompt.
+3. **Scan `models/human-mind/`** — each module file contains: Definition, Key Processes, Related Constructs, Research Notes, and Agent Prompts. These are reusable in any agent system prompt.
 4. **Check `.codex/tasks.md`** — the live queue of concrete tasks awaiting execution, labeled `MIS-XXX`.
 5. **Consult `NAMING_DOCTRINE.md`** before creating any file, folder, variable, or PR title.
 
@@ -98,7 +127,7 @@ This repo is useful in three modes:
 
 **For humans building products:** it answers the question "how should we model the mind across our agent fleet?" without requiring each team to rediscover cognitive science. The models are pre-structured for agent consumption and grounded in research literature.
 
-**For agents working the swarm:** it provides naming contracts and model modules that can be imported verbatim into system prompts, ensuring vocabulary consistency across Agentic Mind OS, the research systems, and any future repos.
+**For agents working the swarm:** it provides naming contracts and HMIS module files that can be imported verbatim into system prompts, ensuring vocabulary consistency across Agentic Mind OS, the research systems, and any future repos.
 
 **For the portfolio as a whole:** it is the governance layer that prevents naming drift, model forking, and incoherence as the swarm grows.
 
@@ -125,6 +154,7 @@ See [NAMING_DOCTRINE.md](./NAMING_DOCTRINE.md) for the full doctrine.
 - Never clinical diagnosis — observation, interpretation, hypothesis, evidence, and decision are separated.
 - Build reusable packs (MindPack protocol) not ad-hoc templates.
 - Clear folder structures over premature app complexity.
+- **HMIS-first**: every cognitive construct must be anchored in `models/human-mind/` before use elsewhere.
 
 ---
 
@@ -142,4 +172,4 @@ See [REPO_MESH.md](./REPO_MESH.md) and `repo-mesh.yaml`.
 4. Researchers: start from [Research Intelligence OS](https://github.com/frankxai/research-intelligence-os), then pick a domain system.
 5. Premium track: see [Starlight Mind OS Pro](https://github.com/frankxai/starlight-mind-os-pro).
 
-**Status**: Foundation v0 seeded. Doctrine, models, and mesh are stable. Domain systems are in active development.
+**Status**: Foundation v0 merged. Doctrine, HMIS ontology, and mesh are stable. Domain systems in active development. Family Guardian agent tier in planning.

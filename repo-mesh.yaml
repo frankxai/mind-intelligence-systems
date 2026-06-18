@@ -1,57 +1,76 @@
 # repo-mesh.yaml
 # Canonical mesh for Mind Intelligence Systems portfolio
 
-version: "0.1.0"
+version: "0.2.0"
 updated: "2026-06-18"
 
 umbrella: "mind-intelligence-systems"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HUMAN MIND INTELLIGENCE SYSTEM — Core Ontology Layer
+# All repos in the swarm MUST consume constructs from this layer.
+# Never introduce a cognitive/behavioural construct in a consumer repo without
+# first anchoring it in models/human-mind/.
+# ─────────────────────────────────────────────────────────────────────────────
+human_mind_ontology:
+  role: "core-ontology-layer"
+  version: "0.1.0"
+  path: "models/human-mind/"
+  description: >
+    The Human Mind Intelligence System (HMIS) is the single source of truth
+    for all cognitive, affective, and behavioural constructs across the swarm.
+    Every repo that models human experience MUST import terminology from here.
+  consumed_by: "all"
+  modules:
+    - name: attention
+      domain: "selective & executive attention"
+      file: "attention.md"
+    - name: memory
+      domain: "working, episodic, semantic, procedural"
+      file: "memory.md"
+    - name: emotion
+      domain: "affect, appraisal, regulation"
+      file: "emotion.md"
+    - name: motivation
+      domain: "goal pursuit, self-determination, volition"
+      file: "motivation.md"
+    - name: identity
+      domain: "self-concept, narrative identity"
+      file: "identity.md"
+    - name: learning
+      domain: "acquisition, consolidation, transfer"
+      file: "learning.md"
+    - name: belief
+      domain: "epistemic states, revision, bias"
+      file: "belief.md"
+    - name: behavior
+      domain: "habit, action, implementation intentions"
+      file: "behavior.md"
+    - name: consciousness
+      domain: "awareness, self-monitoring"
+      file: "consciousness.md"
+    - name: metacognition
+      domain: "thinking about thinking"
+      file: "metacognition.md"
+    - name: decision_making
+      domain: "dual-process, prospect theory, choice"
+      file: "decision-making.md"
+    - name: social_cognition
+      domain: "theory of mind, norms, intergroup"
+      file: "social-cognition.md"
+    - name: family_guardians
+      domain: "relational safety, care dynamics, guardian roles"
+      file: "family-guardians.md"
+      status: "planned"
 
 repos:
   - name: "agentic-mind-os"
     role: "personal-os"
     manifest: "mindpack.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["vault-templates", "personal-agents", "mind-skills"]
-
-  - name: "research-intelligence-systems"
-    role: "research-portfolio"
-    manifest: "researchpack.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
-
-  - name: "research-intelligence-os"
-    role: "runtime-layer"
-    manifest: "research-os.yaml"
-    depends_on: ["mind-intelligence-systems"]
-    provides: ["contracts", "templates", "evals", "scripts"]
-
-  - name: "psychology-research-intelligence-system"
-    role: "domain-system"
-    manifest: "psychologyresearch.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["psych-agents", "psych-skills", "construct-schemas"]
-
-  - name: "neuroscience-research-intelligence-system"
-    role: "domain-system"
-    manifest: "neuroresearch.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
-
-  - name: "awesome-mind-agent-skills"
-    role: "discovery"
-    depends_on: ["mind-intelligence-systems"]
-    provides: ["curated-lists", "ecosystem-map"]
-
-  - name: "starlight-mind-os-pro"
-    role: "premium-distribution"
-    manifest: "starlight-pro.yaml"
-    depends_on: ["agentic-mind-os", "mind-intelligence-systems"]
-    provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
-
-models:
-  human_mind:
-    path: "models/human-mind/"
-    modules:
+    depends_on:
+      - "research-intelligence-os"
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
       - attention
       - memory
       - emotion
@@ -64,9 +83,94 @@ models:
       - metacognition
       - decision_making
       - social_cognition
+    provides: ["vault-templates", "personal-agents", "mind-skills"]
+
+  - name: "research-intelligence-systems"
+    role: "research-portfolio"
+    manifest: "researchpack.yaml"
+    depends_on:
+      - "research-intelligence-os"
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - memory
+      - learning
+      - belief
+      - metacognition
+      - decision_making
+    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+
+  - name: "research-intelligence-os"
+    role: "runtime-layer"
+    manifest: "research-os.yaml"
+    depends_on:
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - belief
+      - decision_making
+    provides: ["contracts", "templates", "evals", "scripts"]
+
+  - name: "psychology-research-intelligence-system"
+    role: "domain-system"
+    manifest: "psychologyresearch.yaml"
+    depends_on:
+      - "research-intelligence-os"
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - attention
+      - memory
+      - emotion
+      - motivation
+      - identity
+      - learning
+      - belief
+      - behavior
+      - metacognition
+      - decision_making
+      - social_cognition
+    provides: ["psych-agents", "psych-skills", "construct-schemas"]
+
+  - name: "neuroscience-research-intelligence-system"
+    role: "domain-system"
+    manifest: "neuroresearch.yaml"
+    depends_on:
+      - "research-intelligence-os"
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - attention
+      - memory
+      - emotion
+      - consciousness
+      - decision_making
+    provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
+
+  - name: "awesome-mind-agent-skills"
+    role: "discovery"
+    depends_on:
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - "reference-taxonomy"
+    provides: ["curated-lists", "ecosystem-map"]
+
+  - name: "starlight-mind-os-pro"
+    role: "premium-distribution"
+    manifest: "starlight-pro.yaml"
+    depends_on:
+      - "agentic-mind-os"
+      - "mind-intelligence-systems"
+    consumes_hmis_modules:
+      - motivation
+      - identity
+      - behavior
+      - learning
+    provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
 
 governance:
   doctrine: "NAMING_DOCTRINE.md"
   architecture: "ARCHITECTURE.md"
   mesh: "REPO_MESH.md"
+  ontology: "models/human-mind/"
   primary_branch_pattern: "hermes/foundation-*"
+  rules:
+    - "Never rename an HMIS module without a deprecation cycle across all consumers."
+    - "Never introduce a cognitive/behavioural construct without anchoring it in HMIS first."
+    - "Agent prompts referencing cognitive constructs must cite the HMIS module filename."
