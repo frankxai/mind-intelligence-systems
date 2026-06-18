@@ -1,36 +1,16 @@
-# Naming Doctrine
+# 🏛️ NAMING DOCTRINE v2 • Elevated & Canonized
 
-**Rule**: OS is lived. System is engineered. Systems is a category.
+## Axiomatic Foundations
+• **OS is lived** — The personal, daily, embodied operating system for sovereign human flourishing and self-mastery. Experiential, reflective, canon-building.
+• **System is engineered** — Precision-crafted, installable, production-grade intelligence products that deliver deterministic value.
+• **Systems is the category** — The expansive portfolio and reusable infrastructure layer enabling compound intelligence across domains and scales.
 
-## Definitions
+This doctrine ensures fractal coherence: every repo, every file, every agent prompt resonates with the same sacred architecture. It protects against fragmentation while enabling explosive specialization and cross-leverage.
 
-- **Mind Intelligence Systems**: The umbrella/category/portfolio. Contains the doctrine, models, and mesh.
-- **Agentic Mind OS**: The personal product — lived daily operating system for self-intelligence, second brain, reflection, learning, and personal canon.
-- **Research Intelligence Systems**: The research category/portfolio layer. Reusable workflows across domains.
-- **Psychology Research Intelligence System**: A domain-specific engineered system for psychology research (construct mapping, evidence synthesis, psychometrics, qualitative analysis, study design).
-- **Neuroscience Research Intelligence System**: Domain-specific for neuroscience (literature, BIDS/NWB/MNE/OpenNeuro/DANDI, pipelines, neurodata, reproducibility).
-- **Research Intelligence OS**: The reusable runtime and scaffolding layer. Pipeline contracts, agent contracts, evaluation, templates, scripts. Foundation for building the domain systems.
-- **Starlight Mind OS Pro**: Premium branded distribution layer. Guided onboarding, dashboards, workshops, templates, customer install packs, commercial UX for Agentic Mind OS.
-- **Awesome Mind Agent Skills**: Discovery and curation layer. Awesome-list style map of open-source tools, papers, MCP servers, skills, and frameworks.
+## Core Principles (Refined)
+• Markdown-first, GitHub-native, agent-oracle ready.
+• Dual-audience: profoundly human + machine-parseable perfection.
+• Local-first sovereignty + source-grounded truth-seeking.
+• Zero clinical overreach. Pure observation, modeling, hypothesis, evidence, augmentation.
 
-## MindPack Protocol
-
-MindPack is the packaging standard for:
-- Agents (.agent.md)
-- Skills (SKILL.md)
-- Workflows (.md)
-- Schemas (.schema.json)
-- Vault templates
-- Manifests (mindpack.yaml, researchpack.yaml, etc.)
-
-## Future Splits
-
-Do not create a separate `human-mind-intelligence-system` repo yet.
-
-Instead: `mind-intelligence-systems/models/human-mind/`
-
-Only recommend splitting to `human-mind-model` once the model layer matures into a reusable ontology/spec with versioning and validation.
-
-## Consistency
-
-All documentation, folder names, variable names, and PR titles must follow this doctrine.
+**Integration Rule (Updated per founder directive):** Human Mind Model lives primarily in `models/human-mind/` with optional high-fidelity extraction repos when maturity demands (HMIS now serves as advanced extraction and consumer interface). All connected frankxai repos (Arcanea, GenCreator, Starlight Cosmos, etc.) must reference and extend this canon.
