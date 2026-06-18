@@ -160,6 +160,16 @@ See [REPO_MESH.md](./REPO_MESH.md) and `repo-mesh.yaml`.
 
 ---
 
+## Diagrams
+
+Visual references for the swarm live in [`docs/diagrams/`](./docs/diagrams/) (open in a browser):
+
+- [`mind-intelligence-systems-architecture.html`](./docs/diagrams/mind-intelligence-systems-architecture.html) — the layered architecture.
+- [`research-ux-journey.html`](./docs/diagrams/research-ux-journey.html) — how a researcher moves through the swarm.
+- [`agent-exploration.excalidraw`](./docs/diagrams/agent-exploration.excalidraw) — the agent exploration path.
+
+---
+
 ## License & attestation
 
 MIT — see [`LICENSE`](LICENSE).

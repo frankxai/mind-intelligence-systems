@@ -83,6 +83,12 @@ repos:
     provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
 
   # --- memory-palace sub-family (Blessing Protocol) ---
+  - name: "bless"
+    family: "memory_palace"
+    role: "protocol"
+    status: "live"
+    provides: ["blessing-protocol"]
+
   - name: "mind-palace-agent-skills"
     family: "memory_palace"
     role: "skill-pack"

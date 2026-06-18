@@ -38,9 +38,11 @@ Every node in the portfolio answers to exactly one of three roles. Pick one; do 
   `research-psychology-system`. The most specific domain leads.
 - **No clinical or diagnostic names.** This portfolio models the mind; it never diagnoses
   one. Avoid `-therapy`, `-diagnosis`, `-treatment`, `-disorder` in any name.
-- **`mind` vs `palace`.** `mind-*` repos model and operate cognition. `*-palace` /
-  `*-mind-palace` repos are the **memory-palace / Blessing-Protocol** practice — a sibling
-  sub-family, named for the ritual, not the cognitive model. Keep the two registers distinct.
+- **`mind` vs `palace`.** `mind-*` repos (except `mind-palace-*`) model and operate cognition.
+  `*-palace`, `mind-palace-*`, and `*-mind-palace` repos are the **memory-palace /
+  Blessing-Protocol** practice — a sibling sub-family, named for the ritual, not the cognitive
+  model. Keep the two registers distinct. (`mind-palace-agent-skills` is memory-palace, despite
+  the `mind-` prefix.)
 - **Files inside a repo** follow the same spirit: a file named `attention.md` is a model
   module; a file named `CANON.md` is a governance declaration. Name by function.
 
