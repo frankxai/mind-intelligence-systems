@@ -147,7 +147,8 @@ repos:
     role: "discovery"
     depends_on:
       - "mind-intelligence-systems"
-    consumes_hmis_modules: "reference-taxonomy"
+    consumes_hmis_modules:
+      - "reference-taxonomy"
     provides: ["curated-lists", "ecosystem-map"]
 
   - name: "starlight-mind-os-pro"

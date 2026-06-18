@@ -175,7 +175,7 @@ All four agents consume `social-cognition.md` immediately (theory of mind is ess
 
 1. **Cross-repo issues**: Create issues in `agentic-mind-os`, `psychology-research-intelligence-system`, `neuroscience-research-intelligence-system`, and `research-intelligence-systems` notifying them of the `consumes_hmis_modules` field addition and requesting they add equivalent fields to their own manifests.
 
-2. **HMIS versioning**: Once `family-guardians.md` is added, bump `human_mind_ontology.version` from `0.1.0` to `0.2.0` in `repo-mesh.yaml`.
+2. **HMIS versioning**: The top-level `repo-mesh.yaml` is now at v0.2.0 (this PR). The `human_mind_ontology.version` field tracks the ontology itself and stays at `0.1.0` until a new module is merged (e.g., `family-guardians.md`). Once that module is added and merged, bump `human_mind_ontology.version` to `0.2.0` in `repo-mesh.yaml`. The two version fields are distinct: mesh version tracks structural/governance changes; ontology version tracks module additions or breaking renames.
 
 3. **Decision-making and social-cognition modules**: These were listed in `repo-mesh.yaml` as modules but the files may be thin. Prioritise completing them before cross-repo alignment.
 
