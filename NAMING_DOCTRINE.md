@@ -192,9 +192,9 @@ The founder (frankxai) holds final veto on all naming decisions. This doctrine e
 | Protection | 🛡️ **Ares** | `family-guardians`, `multi-agent-harness` | Guards and orchestrates the fleet |
 | Skill & Craft | ⚡ **Hermes** | `claude-skills`, `ai-architect` | Delivers capability and architectural vision |
 | Personal Mastery | 🌿 **Demeter** | `agentic-mind-os` | Nurtures daily growth and lived intelligence |
-| Premium & Premium | 👑 **Zeus** | `starlight-mind-os-pro` | Rules the premium experience layer |
+| Premium Experience | 👑 **Zeus** | `starlight-mind-os-pro` | Rules the premium experience layer |
 
-*Every commit to this empire is an act of gods work.*
+*Every commit to this empire is an act of gods' work.*
 
 ---
 
