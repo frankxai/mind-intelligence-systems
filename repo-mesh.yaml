@@ -1,0 +1,72 @@
+# repo-mesh.yaml
+# Canonical mesh for Mind Intelligence Systems portfolio
+
+version: "0.1.0"
+updated: "2026-06-18"
+
+umbrella: "mind-intelligence-systems"
+
+repos:
+  - name: "agentic-mind-os"
+    role: "personal-os"
+    manifest: "mindpack.yaml"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    provides: ["vault-templates", "personal-agents", "mind-skills"]
+
+  - name: "research-intelligence-systems"
+    role: "research-portfolio"
+    manifest: "researchpack.yaml"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+
+  - name: "research-intelligence-os"
+    role: "runtime-layer"
+    manifest: "research-os.yaml"
+    depends_on: ["mind-intelligence-systems"]
+    provides: ["contracts", "templates", "evals", "scripts"]
+
+  - name: "psychology-research-intelligence-system"
+    role: "domain-system"
+    manifest: "psychologyresearch.yaml"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    provides: ["psych-agents", "psych-skills", "construct-schemas"]
+
+  - name: "neuroscience-research-intelligence-system"
+    role: "domain-system"
+    manifest: "neuroresearch.yaml"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
+
+  - name: "awesome-mind-agent-skills"
+    role: "discovery"
+    depends_on: ["mind-intelligence-systems"]
+    provides: ["curated-lists", "ecosystem-map"]
+
+  - name: "starlight-mind-os-pro"
+    role: "premium-distribution"
+    manifest: "starlight-pro.yaml"
+    depends_on: ["agentic-mind-os", "mind-intelligence-systems"]
+    provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
+
+models:
+  human_mind:
+    path: "models/human-mind/"
+    modules:
+      - attention
+      - memory
+      - emotion
+      - motivation
+      - identity
+      - learning
+      - belief
+      - behavior
+      - consciousness
+      - metacognition
+      - decision_making
+      - social_cognition
+
+governance:
+  doctrine: "NAMING_DOCTRINE.md"
+  architecture: "ARCHITECTURE.md"
+  mesh: "REPO_MESH.md"
+  primary_branch_pattern: "hermes/foundation-*"
