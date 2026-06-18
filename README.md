@@ -1,5 +1,13 @@
 # Mind Intelligence Systems
 
+> Umbrella canon for a swarm of agentic systems that help humans understand, structure,
+> improve, and extend their own minds — cognition, memory, learning, self-understanding.
+
+[![Built on SIP](https://img.shields.io/badge/Built%20on-SIP-c9b6ff.svg)](https://github.com/frankxai/Starlight-Intelligence-System)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f4c97a.svg)](LICENSE)
+[![Layer: Canon](https://img.shields.io/badge/layer-canon-blue.svg)](./ARCHITECTURE.md)
+[![Status: v0.2](https://img.shields.io/badge/status-v0.2%20foundation-green.svg)](./repo-mesh.yaml)
+
 **Mind Intelligence Systems** is the umbrella architecture for agentic systems that help humans understand, structure, improve, and extend learning, self-understanding, psychology, neuroscience, research, and human development.
 
 This repo is the **canon layer** — not a product itself, but the source of truth for naming, models, governance, and the mesh that holds every sibling repo in coherent relationship.
@@ -20,18 +28,24 @@ Without this repo, each sibling would name things independently, model the mind 
 
 ## The Portfolio
 
-| Repo | What it is | Primary Audience |
-|------|-----------|-----------------|
-| **[mind-intelligence-systems](https://github.com/frankxai/mind-intelligence-systems)** *(this repo)* | Umbrella canon, naming, models, governance | Agents and architects |
-| **[agentic-mind-os](https://github.com/frankxai/agentic-mind-os)** | Personal second-brain OS — lived daily | Individual practitioners |
-| **[research-intelligence-os](https://github.com/frankxai/research-intelligence-os)** | Reusable runtime: contracts, templates, evals | Developers, domain system builders |
-| **[research-intelligence-systems](https://github.com/frankxai/research-intelligence-systems)** | Cross-domain research portfolio layer | Researchers, analysts |
-| **[psychology-research-intelligence-system](https://github.com/frankxai/psychology-research-intelligence-system)** | Psychology vertical: constructs, evidence, psychometrics | Psychology researchers |
-| **[neuroscience-research-intelligence-system](https://github.com/frankxai/neuroscience-research-intelligence-system)** | Neuroscience vertical: BIDS, NWB, MNE, reproducible pipelines | Neuroscience researchers |
-| **[awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills)** | Curated discovery layer and ecosystem map | Anyone entering the swarm |
-| **[starlight-mind-os-pro](https://github.com/frankxai/starlight-mind-os-pro)** | Premium distribution, dashboards, onboarding, workshops | Customers, learners |
+| Repo | Family | What it is | Status |
+|------|--------|-----------|--------|
+| **[mind-intelligence-systems](https://github.com/frankxai/mind-intelligence-systems)** *(this repo)* | canon | Umbrella canon, naming, models, governance | live |
+| **[human-mind-intelligence-system](https://github.com/frankxai/human-mind-intelligence-system)** | cognitive | Engineered System: cognitive schemas, ontology, response-prediction | live |
+| **[agentic-mind-os](https://github.com/frankxai/agentic-mind-os)** | lived OS | Personal mind / second-brain OS — lived daily | live |
+| **[starlight-mind-os-pro](https://github.com/frankxai/starlight-mind-os-pro)** | lived OS | Premium distribution: dashboards, onboarding, workshops | live |
+| **[awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills)** | discovery | Curated discovery layer and ecosystem map | live |
+| **[mind-palace-agent-skills](https://github.com/frankxai/mind-palace-agent-skills)** | memory palace | Blessing-Protocol skills — ingest · witness · grow | live |
+| **[frankx-mind-palace](https://github.com/frankxai/frankx-mind-palace)** | memory palace | Frank's blessed work as data (the lived practice) | live |
+| **[research-intelligence-os](https://github.com/frankxai/research-intelligence-os)** | research | Reusable research runtime: contracts, templates, evals | planned |
+| **[research-intelligence-systems](https://github.com/frankxai/research-intelligence-systems)** | research | Cross-domain research portfolio layer | planned |
+| **[psychology-research-intelligence-system](https://github.com/frankxai/psychology-research-intelligence-system)** | research | Psychology vertical: constructs, evidence, psychometrics | planned |
+| **[neuroscience-research-intelligence-system](https://github.com/frankxai/neuroscience-research-intelligence-system)** | research | Neuroscience vertical: BIDS, NWB, MNE pipelines | planned |
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for the layered diagram and [REPO_MESH.md](./REPO_MESH.md) for explicit dependency flows.
+The swarm spans two sub-families under one umbrella: the **cognitive** track (model → engineered
+system → lived OS → research) and the sibling **memory-palace** track (the
+[Blessing Protocol](https://github.com/frankxai/bless)). See [ARCHITECTURE.md](./ARCHITECTURE.md)
+for the layered diagram and [REPO_MESH.md](./REPO_MESH.md) for explicit dependency flows.
 
 ---
 
@@ -143,3 +157,15 @@ See [REPO_MESH.md](./REPO_MESH.md) and `repo-mesh.yaml`.
 5. Premium track: see [Starlight Mind OS Pro](https://github.com/frankxai/starlight-mind-os-pro).
 
 **Status**: Foundation v0 seeded. Doctrine, models, and mesh are stable. Domain systems are in active development.
+
+---
+
+## License & attestation
+
+MIT — see [`LICENSE`](LICENSE).
+
+**Built on SIP.** This portfolio composes the
+[Starlight Intelligence Protocol](https://github.com/frankxai/Starlight-Intelligence-System).
+Per SIP § Sovereignty clause.
+
+Built by [Frank Riemer](https://frankx.ai). For builders, not consumers.
