@@ -1,72 +1,211 @@
 # repo-mesh.yaml
 # Canonical mesh for Mind Intelligence Systems portfolio
+# frankxai Sovereign Intelligence Empire — v3.0
 
-version: "0.1.0"
+version: "0.3.0"
 updated: "2026-06-18"
+ontology_version: "0.1.0"
 
 umbrella: "mind-intelligence-systems"
+founder: "frankxai"
 
+# ─────────────────────────────────────────────
+# LAYER 0: Canon & Governance (this repo)
+# ─────────────────────────────────────────────
+# mind-intelligence-systems is the root — no external depends_on
+
+# ─────────────────────────────────────────────
+# LAYER 1: Personal & Runtime OS
+# ─────────────────────────────────────────────
 repos:
   - name: "agentic-mind-os"
     role: "personal-os"
+    layer: 1
     manifest: "mindpack.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    consumes_hmis_modules: ["attention", "memory", "emotion", "motivation", "identity", "learning", "metacognition"]
     provides: ["vault-templates", "personal-agents", "mind-skills"]
-
-  - name: "research-intelligence-systems"
-    role: "research-portfolio"
-    manifest: "researchpack.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+    url: "https://github.com/frankxai/agentic-mind-os"
 
   - name: "research-intelligence-os"
     role: "runtime-layer"
+    layer: 1
     manifest: "research-os.yaml"
     depends_on: ["mind-intelligence-systems"]
+    consumes_hmis_modules: ["attention", "memory", "learning", "belief"]
     provides: ["contracts", "templates", "evals", "scripts"]
+    url: "https://github.com/frankxai/research-intelligence-os"
 
+# ─────────────────────────────────────────────
+# LAYER 2: Portfolio & Creative OS
+# ─────────────────────────────────────────────
+  - name: "research-intelligence-systems"
+    role: "research-portfolio"
+    layer: 2
+    manifest: "researchpack.yaml"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    consumes_hmis_modules: ["attention", "memory", "belief", "learning", "decision_making"]
+    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+    url: "https://github.com/frankxai/research-intelligence-systems"
+
+  - name: "gencreator-ai"
+    role: "creative-os"
+    layer: 2
+    manifest: "gencreator.yaml"
+    depends_on: ["mind-intelligence-systems", "arcanea"]
+    consumes_hmis_modules: ["motivation", "emotion", "identity", "behavior"]
+    provides: ["creative-agents", "campaign-intelligence", "mcp-tools"]
+    url: "https://github.com/frankxai/gencreator-ai"
+
+# ─────────────────────────────────────────────
+# LAYER 3: Domain Systems & Creative Labs
+# ─────────────────────────────────────────────
   - name: "psychology-research-intelligence-system"
     role: "domain-system"
+    layer: 3
     manifest: "psychologyresearch.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    consumes_hmis_modules: ["emotion", "belief", "motivation", "identity", "behavior", "social_cognition", "metacognition"]
     provides: ["psych-agents", "psych-skills", "construct-schemas"]
+    url: "https://github.com/frankxai/psychology-research-intelligence-system"
 
   - name: "neuroscience-research-intelligence-system"
     role: "domain-system"
+    layer: 3
     manifest: "neuroresearch.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    consumes_hmis_modules: ["attention", "memory", "consciousness", "decision_making", "learning"]
     provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
+    url: "https://github.com/frankxai/neuroscience-research-intelligence-system"
 
-  - name: "awesome-mind-agent-skills"
-    role: "discovery"
+  - name: "arcanea"
+    role: "creative-intelligence-lab"
+    layer: 3
+    manifest: "arcanea.yaml"
     depends_on: ["mind-intelligence-systems"]
-    provides: ["curated-lists", "ecosystem-map"]
+    consumes_hmis_modules: ["emotion", "identity", "motivation", "consciousness", "belief"]
+    provides: ["creative-agent-primitives", "arcanea-skills", "narrative-schemas"]
+    url: "https://github.com/frankxai/arcanea"
+
+  - name: "starlight-cosmos-engine"
+    role: "cosmos-pipeline"
+    layer: 3
+    manifest: "starlight-cosmos.yaml"
+    depends_on: ["mind-intelligence-systems", "arcanea"]
+    consumes_hmis_modules: ["identity", "motivation", "consciousness", "emotion"]
+    provides: ["cosmos-pipelines", "worldbuilding-schemas", "narrative-agents"]
+    url: "https://github.com/frankxai/starlight-cosmos-engine"
+
+  - name: "starlight-intelligence-system"
+    role: "premium-intelligence"
+    layer: 3
+    manifest: "starlight-intelligence.yaml"
+    depends_on: ["mind-intelligence-systems", "starlight-cosmos-engine"]
+    consumes_hmis_modules: ["motivation", "identity", "learning"]
+    provides: ["premium-packs", "intelligence-workflows", "distribution-agents"]
+    url: "https://github.com/frankxai/starlight-intelligence-system"
 
   - name: "starlight-mind-os-pro"
     role: "premium-distribution"
+    layer: 3
     manifest: "starlight-pro.yaml"
     depends_on: ["agentic-mind-os", "mind-intelligence-systems"]
+    consumes_hmis_modules: ["motivation", "identity", "metacognition", "emotion"]
     provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
+    url: "https://github.com/frankxai/starlight-mind-os-pro"
 
+# ─────────────────────────────────────────────
+# LAYER 4: Infrastructure, Protection & Skills
+# ─────────────────────────────────────────────
+  - name: "claude-skills"
+    role: "skill-primitives"
+    layer: 4
+    depends_on: ["mind-intelligence-systems"]
+    consumes_hmis_modules: ["attention", "memory", "metacognition", "learning"]
+    provides: ["skill-primitives", "agent-tools", "claude-workflows"]
+    url: "https://github.com/frankxai/claude-skills"
+
+  - name: "ai-architect"
+    role: "architecture-intelligence"
+    layer: 4
+    manifest: "ai-architect.yaml"
+    depends_on: ["mind-intelligence-systems", "claude-skills"]
+    consumes_hmis_modules: ["decision_making", "metacognition", "learning"]
+    provides: ["architecture-agents", "scaffold-generators", "design-intelligence"]
+    url: "https://github.com/frankxai/ai-architect"
+
+  - name: "family-guardians"
+    role: "protection-sentinels"
+    layer: 4
+    manifest: "family-guardians.yaml"
+    depends_on: ["mind-intelligence-systems", "claude-skills"]
+    consumes_hmis_modules: ["behavior", "emotion", "social_cognition", "motivation"]
+    provides: ["guardian-sentinels", "safety-agents", "family-protection-workflows"]
+    url: "https://github.com/frankxai/family-guardians"
+
+  - name: "multi-agent-harness"
+    role: "orchestration-runtime"
+    layer: 4
+    manifest: "multi-agent-harness.yaml"
+    depends_on: ["mind-intelligence-systems", "claude-skills", "ai-architect"]
+    consumes_hmis_modules: ["decision_making", "attention", "metacognition"]
+    provides: ["orchestration-runtime", "agent-router", "lifecycle-manager"]
+    url: "https://github.com/frankxai/multi-agent-harness"
+
+# ─────────────────────────────────────────────
+# DISCOVERY LAYER
+# ─────────────────────────────────────────────
+  - name: "awesome-mind-agent-skills"
+    role: "discovery"
+    layer: 5
+    depends_on: ["mind-intelligence-systems"]
+    provides: ["curated-lists", "ecosystem-map"]
+    url: "https://github.com/frankxai/awesome-mind-agent-skills"
+
+# ─────────────────────────────────────────────
+# HUMAN MIND MODEL (Layer 0, Sub-layer Alpha)
+# ─────────────────────────────────────────────
 models:
   human_mind:
     path: "models/human-mind/"
+    version: "0.1.0"
     modules:
-      - attention
-      - memory
-      - emotion
-      - motivation
-      - identity
-      - learning
-      - belief
-      - behavior
-      - consciousness
-      - metacognition
-      - decision_making
-      - social_cognition
+      - name: attention
+        status: active
+      - name: memory
+        status: active
+      - name: emotion
+        status: active
+      - name: motivation
+        status: active
+      - name: identity
+        status: active
+      - name: learning
+        status: active
+      - name: belief
+        status: active
+      - name: behavior
+        status: active
+      - name: consciousness
+        status: active
+      - name: metacognition
+        status: active
+      - name: decision_making
+        status: expanding
+      - name: social_cognition
+        status: expanding
 
+# ─────────────────────────────────────────────
+# GOVERNANCE
+# ─────────────────────────────────────────────
 governance:
   doctrine: "NAMING_DOCTRINE.md"
   architecture: "ARCHITECTURE.md"
   mesh: "REPO_MESH.md"
   primary_branch_pattern: "hermes/foundation-*"
+  mesh_integrity_rules:
+    - "No circular dependencies"
+    - "All repos must declare depends_on honestly"
+    - "Canon has zero external dependencies"
+    - "Protection repos may not depend on creative repos"
+    - "All repos consuming HMIS modules must declare consumes_hmis_modules"
