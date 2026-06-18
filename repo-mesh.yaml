@@ -1,52 +1,121 @@
 # repo-mesh.yaml
-# Canonical mesh for Mind Intelligence Systems portfolio
+# Canonical mesh for the Mind Intelligence Systems portfolio.
+# Machine-readable source of truth. Any coding agent entering the swarm reads this first.
 
-version: "0.1.0"
+version: "0.2.0"
 updated: "2026-06-18"
 
 umbrella: "mind-intelligence-systems"
 
+# Sub-families group the swarm by what each cluster is for.
+families:
+  canon:        "Naming, models, mesh, governance"
+  cognitive:    "The human-mind model and its engineered implementation"
+  lived_os:     "Personal OS run daily + its premium distribution"
+  research:     "Cross-domain research runtime + domain verticals"
+  memory_palace: "The Blessing-Protocol memory-palace practice (sibling sub-family)"
+  discovery:    "The curated front door to the swarm"
+
 repos:
+  # --- canon ---
+  - name: "mind-intelligence-systems"
+    family: "canon"
+    role: "umbrella-canon"
+    status: "live"
+    provides: ["naming-doctrine", "human-mind-model", "repo-mesh"]
+
+  # --- cognitive ---
+  - name: "human-mind-intelligence-system"
+    family: "cognitive"
+    role: "engineered-system"
+    status: "live"
+    depends_on: ["mind-intelligence-systems"]
+    provides: ["cognitive-schemas", "ontology", "response-prediction-primitives"]
+
+  # --- lived OS + distribution ---
   - name: "agentic-mind-os"
+    family: "lived_os"
     role: "personal-os"
     manifest: "mindpack.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    status: "live"
+    depends_on: ["human-mind-intelligence-system", "mind-intelligence-systems"]
     provides: ["vault-templates", "personal-agents", "mind-skills"]
 
-  - name: "research-intelligence-systems"
-    role: "research-portfolio"
-    manifest: "researchpack.yaml"
-    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+  - name: "starlight-mind-os-pro"
+    family: "lived_os"
+    role: "premium-distribution"
+    manifest: "starlight-pro.yaml"
+    status: "live"
+    depends_on: ["agentic-mind-os", "mind-intelligence-systems"]
+    provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
 
+  # --- research runtime + verticals (portfolio vision; not all reachable yet) ---
   - name: "research-intelligence-os"
+    family: "research"
     role: "runtime-layer"
     manifest: "research-os.yaml"
+    status: "planned"
     depends_on: ["mind-intelligence-systems"]
     provides: ["contracts", "templates", "evals", "scripts"]
 
+  - name: "research-intelligence-systems"
+    family: "research"
+    role: "research-portfolio"
+    manifest: "researchpack.yaml"
+    status: "planned"
+    depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
+    provides: ["cross-domain-packs", "workflows", "claim-graphs"]
+
   - name: "psychology-research-intelligence-system"
+    family: "research"
     role: "domain-system"
     manifest: "psychologyresearch.yaml"
+    status: "planned"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
     provides: ["psych-agents", "psych-skills", "construct-schemas"]
 
   - name: "neuroscience-research-intelligence-system"
+    family: "research"
     role: "domain-system"
     manifest: "neuroresearch.yaml"
+    status: "planned"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
     provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
 
+  # --- memory-palace sub-family (Blessing Protocol) ---
+  - name: "bless"
+    family: "memory_palace"
+    role: "protocol"
+    status: "live"
+    provides: ["blessing-protocol"]
+
+  - name: "mind-palace-agent-skills"
+    family: "memory_palace"
+    role: "skill-pack"
+    status: "live"
+    depends_on: ["bless"]
+    provides: ["blessing-skills", "palace-build"]
+
+  - name: "frankx-mind-palace"
+    family: "memory_palace"
+    role: "lived-data"
+    status: "live"
+    depends_on: ["mind-palace-agent-skills", "bless"]
+    provides: ["blessing-ledger", "rooms"]
+
+  # --- discovery ---
   - name: "awesome-mind-agent-skills"
+    family: "discovery"
     role: "discovery"
+    status: "live"
     depends_on: ["mind-intelligence-systems"]
     provides: ["curated-lists", "ecosystem-map"]
 
-  - name: "starlight-mind-os-pro"
-    role: "premium-distribution"
-    manifest: "starlight-pro.yaml"
-    depends_on: ["agentic-mind-os", "mind-intelligence-systems"]
-    provides: ["onboarding", "dashboards", "workshops", "commercial-templates"]
+# Substrate the whole portfolio composes.
+substrate:
+  name: "Starlight Intelligence Protocol (SIP)"
+  repo: "Starlight-Intelligence-System"
+  attestation: "Built on SIP"
 
 models:
   human_mind:
