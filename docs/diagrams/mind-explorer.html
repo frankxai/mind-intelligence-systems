@@ -62,7 +62,7 @@
   <section>
     <h2>The shared model — 12 constructs</h2>
     <div class="ring-wrap">
-      <svg id="ring" viewBox="0 0 420 420" aria-label="Ring of 12 cognitive constructs and their edges"></svg>
+      <svg id="ring" viewBox="0 0 420 420" role="img" aria-label="Ring of 12 cognitive constructs and their edges"></svg>
       <div class="legend" id="legend"></div>
       <div class="cta">
         <a href="https://github.com/frankxai/human-mind-intelligence-system/blob/main/docs/explorer/index.html">Open the full Construct Explorer →</a>
@@ -86,6 +86,7 @@
     {name:"agentic-mind-os",family:"lived_os",role:"personal mind OS (daily)",status:"live"},
     {name:"starlight-mind-os-pro",family:"lived_os",role:"premium distribution",status:"live"},
     {name:"research-intelligence-os",family:"research",role:"research runtime",status:"planned"},
+    {name:"research-intelligence-systems",family:"research",role:"research portfolio",status:"planned"},
     {name:"psychology-research-intelligence-system",family:"research",role:"psychology vertical",status:"planned"},
     {name:"neuroscience-research-intelligence-system",family:"research",role:"neuroscience vertical",status:"planned"},
     {name:"bless",family:"memory_palace",role:"Blessing Protocol",status:"live"},
@@ -127,7 +128,7 @@
   var COL={gates:"var(--gates)",feeds:"var(--feeds)",modulates:"var(--modulates)","reflects-on":"var(--reflects-on)"};
   var NS="http://www.w3.org/2000/svg",svg=document.getElementById("ring");
   function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
-  var cx=210,cy=210,R=140,pos={};
+  var cx=210,cy=210,R=110,pos={};
   C.forEach(function(id,i){var a=(i/C.length)*Math.PI*2-Math.PI/2;pos[id]={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a),a:a};});
   E.forEach(function(e){
     var p=pos[e[0]],q=pos[e[1]],mx=(p.x+q.x)/2,my=(p.y+q.y)/2;
@@ -145,7 +146,7 @@
     var k=document.createElement("span");k.className="k";
     k.innerHTML='<span class="sw" style="border-color:'+COL[t]+'"></span>'+t;lg.appendChild(k);
   });
-  document.getElementById("foot").textContent="11 repos · 6 families · 12 constructs · 28 edges · Built on SIP. Source of truth: repo-mesh.yaml + models/human-mind/.";
+  document.getElementById("foot").textContent="12 repos · 6 families · 12 constructs · 28 edges · Built on SIP. Source of truth: repo-mesh.yaml + models/human-mind/.";
 })();
 </script>
 </body>
