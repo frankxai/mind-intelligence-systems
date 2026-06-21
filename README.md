@@ -164,6 +164,7 @@ See [REPO_MESH.md](./REPO_MESH.md) and `repo-mesh.yaml`.
 
 Visual references for the swarm live in [`docs/diagrams/`](./docs/diagrams/) (open in a browser):
 
+- [`mind-explorer.html`](./docs/diagrams/mind-explorer.html) — interactive portfolio + 12-construct model overview; links to the cognitive System's deep [Construct Explorer](https://github.com/frankxai/human-mind-intelligence-system/blob/main/docs/explorer/index.html).
 - [`mind-intelligence-systems-architecture.html`](./docs/diagrams/mind-intelligence-systems-architecture.html) — the layered architecture.
 - [`research-ux-journey.html`](./docs/diagrams/research-ux-journey.html) — how a researcher moves through the swarm.
 - [`agent-exploration.excalidraw`](./docs/diagrams/agent-exploration.excalidraw) — the agent exploration path.

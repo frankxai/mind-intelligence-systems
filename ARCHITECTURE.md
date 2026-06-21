@@ -22,6 +22,10 @@ Memory Palace (sibling) mind-palace-agent-skills + frankx-mind-palace   (Blessin
 Discovery               awesome-mind-agent-skills   (the front door)
 ```
 
+An interactive version of this map — plus the shared 12-construct model and a link
+to the cognitive System's deep per-construct explorer — lives at
+[`docs/diagrams/mind-explorer.html`](./docs/diagrams/mind-explorer.html) (open in a browser).
+
 ## Two sub-families under one umbrella
 
 The swarm holds two distinct registers — kept distinct on purpose (see
