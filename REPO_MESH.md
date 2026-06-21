@@ -17,6 +17,8 @@ For the machine-readable version, see [`repo-mesh.yaml`](./repo-mesh.yaml).
 
 ## ✦ The Full frankxai Constellation
 
+> **Layer mapping note:** The layer numbers in this mesh are topology labels for `repo-mesh.yaml`, not a replacement for the broader 1–7 conceptual stack in [`ARCHITECTURE.md`](./ARCHITECTURE.md). Use this document for repo dependency metadata; use `ARCHITECTURE.md` for the portfolio-level conceptual layering.
+
 ### Layer 0: Canon & Governance (This Repo)
 
 | Repo | URL | Role |

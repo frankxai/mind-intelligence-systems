@@ -69,11 +69,11 @@ consumes_hmis_modules:
 |------|-----------------|---------|
 | `agentic-mind-os` | attention, memory, emotion, motivation, identity, learning, metacognition | Personal agent grounding |
 | `arcanea` | emotion, identity, motivation, consciousness, belief | Creative intelligence |
-| `psychology-research-intelligence-system` | emotion, belief, motivation, identity, behavior, social_cognition, metacognition | Research constructs |
-| `neuroscience-research-intelligence-system` | attention, memory, consciousness, decision_making, learning | Neuro schemas |
-| `family-guardians` | behavior, emotion, social_cognition, motivation | Guardian sentinels |
+| `psychology-research-intelligence-system` | emotion, belief, motivation, identity, behavior, social-cognition, metacognition | Research constructs |
+| `neuroscience-research-intelligence-system` | attention, memory, consciousness, decision-making, learning | Neuro schemas |
+| `family-guardians` | behavior, emotion, social-cognition, motivation | Guardian sentinels |
 | `claude-skills` | attention, memory, metacognition, learning | Skill primitive grounding |
-| `multi-agent-harness` | decision_making, attention, metacognition | Orchestration routing |
+| `multi-agent-harness` | decision-making, attention, metacognition | Orchestration routing |
 | `starlight-cosmos-engine` | identity, motivation, consciousness, emotion | Worldbuilding and narrative |
 
 ---

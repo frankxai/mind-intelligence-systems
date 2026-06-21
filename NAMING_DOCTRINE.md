@@ -72,7 +72,7 @@ frankxai/                          ← The sovereign empire namespace
 ├── arcanea/                       ← Layer 3: Applied creative intelligence lab
 ├── starlight-cosmos-engine/       ← Layer 3: Cosmos/storytelling pipeline
 ├── starlight-intelligence-system/ ← Layer 3: Premium distribution layer
-├── gencreator-ai/                 ← Layer 3: Creative MCP / content OS
+├── gencreator-ai/                 ← Layer 2: Creative MCP / content OS
 ├── claude-skills/                 ← Layer 4: Agent skill primitives
 ├── ai-architect/                  ← Layer 4: System design intelligence
 ├── family-guardians/              ← Layer 4: Protection and sentinel systems

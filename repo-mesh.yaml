@@ -44,7 +44,7 @@ repos:
     layer: 2
     manifest: "researchpack.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    consumes_hmis_modules: ["attention", "memory", "belief", "learning", "decision_making"]
+    consumes_hmis_modules: ["attention", "memory", "belief", "learning", "decision-making"]
     provides: ["cross-domain-packs", "workflows", "claim-graphs"]
     url: "https://github.com/frankxai/research-intelligence-systems"
 
@@ -65,7 +65,7 @@ repos:
     layer: 3
     manifest: "psychologyresearch.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    consumes_hmis_modules: ["emotion", "belief", "motivation", "identity", "behavior", "social_cognition", "metacognition"]
+    consumes_hmis_modules: ["emotion", "belief", "motivation", "identity", "behavior", "social-cognition", "metacognition"]
     provides: ["psych-agents", "psych-skills", "construct-schemas"]
     url: "https://github.com/frankxai/psychology-research-intelligence-system"
 
@@ -74,7 +74,7 @@ repos:
     layer: 3
     manifest: "neuroresearch.yaml"
     depends_on: ["research-intelligence-os", "mind-intelligence-systems"]
-    consumes_hmis_modules: ["attention", "memory", "consciousness", "decision_making", "learning"]
+    consumes_hmis_modules: ["attention", "memory", "consciousness", "decision-making", "learning"]
     provides: ["neuro-agents", "bids-nwb-skills", "neuro-schemas"]
     url: "https://github.com/frankxai/neuroscience-research-intelligence-system"
 
@@ -130,7 +130,7 @@ repos:
     layer: 4
     manifest: "ai-architect.yaml"
     depends_on: ["mind-intelligence-systems", "claude-skills"]
-    consumes_hmis_modules: ["decision_making", "metacognition", "learning"]
+    consumes_hmis_modules: ["decision-making", "metacognition", "learning"]
     provides: ["architecture-agents", "scaffold-generators", "design-intelligence"]
     url: "https://github.com/frankxai/ai-architect"
 
@@ -139,7 +139,7 @@ repos:
     layer: 4
     manifest: "family-guardians.yaml"
     depends_on: ["mind-intelligence-systems", "claude-skills"]
-    consumes_hmis_modules: ["behavior", "emotion", "social_cognition", "motivation"]
+    consumes_hmis_modules: ["behavior", "emotion", "social-cognition", "motivation"]
     provides: ["guardian-sentinels", "safety-agents", "family-protection-workflows"]
     url: "https://github.com/frankxai/family-guardians"
 
@@ -148,7 +148,7 @@ repos:
     layer: 4
     manifest: "multi-agent-harness.yaml"
     depends_on: ["mind-intelligence-systems", "claude-skills", "ai-architect"]
-    consumes_hmis_modules: ["decision_making", "attention", "metacognition"]
+    consumes_hmis_modules: ["decision-making", "attention", "metacognition"]
     provides: ["orchestration-runtime", "agent-router", "lifecycle-manager"]
     url: "https://github.com/frankxai/multi-agent-harness"
 
@@ -190,9 +190,9 @@ models:
         status: active
       - name: metacognition
         status: active
-      - name: decision_making
+      - name: decision-making
         status: expanding
-      - name: social_cognition
+      - name: social-cognition
         status: expanding
 
 # ─────────────────────────────────────────────
