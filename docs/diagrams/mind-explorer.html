@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mind Intelligence Systems — Portfolio & Model Explorer</title>
+<style>
+  :root {
+    --bg:#0a0b0f; --bg2:#0e1016; --panel:rgba(255,255,255,0.03); --panel2:rgba(255,255,255,0.05);
+    --line:rgba(255,255,255,0.09); --txt:#e8eaf0; --dim:#9aa0ad; --faint:#6b7280;
+    --canon:#f5a623; --cognitive:#4aa3ff; --lived_os:#2ee6a6; --research:#b06cff;
+    --memory_palace:#ff6c8f; --discovery:#cdd3e0;
+    --gates:#f5a623; --feeds:#4aa3ff; --modulates:#b06cff; --reflects-on:#2ee6a6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 700px at 70% -10%,#15171f 0%,var(--bg) 60%);color:var(--txt);
+    font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--cognitive);text-decoration:none} a:hover{text-decoration:underline}
+  header{padding:24px 30px 16px;border-bottom:1px solid var(--line)}
+  h1{font-size:20px;font-weight:650;margin:0 0 6px;letter-spacing:-0.01em}
+  h1 span{color:var(--faint);font-weight:450}
+  .sub{color:var(--dim);max-width:880px;font-size:13.5px;margin:0}
+  .grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:0}
+  @media(max-width:980px){.grid{grid-template-columns:1fr}}
+  section{padding:22px 30px}
+  section + section{border-left:1px solid var(--line)}
+  @media(max-width:980px){section+section{border-left:none;border-top:1px solid var(--line)}}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin:0 0 16px;font-weight:600}
+  .layer{margin-bottom:18px}
+  .layer-name{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);margin:0 0 8px}
+  .cards{display:flex;flex-wrap:wrap;gap:9px}
+  .card{border:1px solid var(--line);border-left-width:3px;border-radius:10px;padding:10px 13px;background:var(--panel);min-width:210px;flex:1}
+  .card .nm{font-size:13.5px;font-weight:600}
+  .card .ro{font-size:11.5px;color:var(--dim);margin-top:2px}
+  .card .st{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);margin-top:5px}
+  .card .st.planned{color:#b8860b}
+  .ring-wrap{display:flex;flex-direction:column;align-items:center}
+  svg{width:100%;max-width:420px;height:auto;display:block}
+  .node-label{fill:var(--dim);font-size:11px}
+  .edge{fill:none;opacity:.4}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--dim);margin-top:10px;justify-content:center}
+  .legend .k{display:inline-flex;align-items:center;gap:6px}
+  .legend .sw{width:18px;border-top:3px solid;border-radius:3px}
+  .cta{margin-top:18px;text-align:center}
+  .cta a{display:inline-block;border:1px solid rgba(74,163,255,.4);color:#bcd9ff;border-radius:10px;padding:10px 16px;font-size:13.5px;background:rgba(74,163,255,.07)}
+  .note{color:var(--faint);font-size:12px;margin-top:10px;text-align:center;max-width:360px}
+  footer{padding:14px 30px;border-top:1px solid var(--line);color:var(--faint);font-size:11.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Mind Intelligence Systems <span>· Portfolio &amp; Model Explorer</span></h1>
+  <p class="sub">The layered swarm at a glance, and the twelve-construct model it shares. The deep, per-construct drill-in — schema indicators, lenses, and research grounding — lives in the cognitive System's explorer.</p>
+</header>
+
+<div class="grid">
+  <section>
+    <h2>The portfolio</h2>
+    <div id="layers"></div>
+  </section>
+
+  <section>
+    <h2>The shared model — 12 constructs</h2>
+    <div class="ring-wrap">
+      <svg id="ring" viewBox="0 0 420 420" aria-label="Ring of 12 cognitive constructs and their edges"></svg>
+      <div class="legend" id="legend"></div>
+      <div class="cta">
+        <a href="https://github.com/frankxai/human-mind-intelligence-system/blob/main/docs/explorer/index.html">Open the full Construct Explorer →</a>
+      </div>
+      <p class="note">Per-construct schema, edges, and frontier + cognitive-science research grounding. Built on the human-mind canon in <a href="../../models/human-mind/">models/human-mind/</a>.</p>
+    </div>
+  </section>
+</div>
+<footer id="foot"></footer>
+
+<script>
+(function(){
+  var FAM = {
+    canon:"Canon & governance", cognitive:"Cognitive model", lived_os:"Lived OS + distribution",
+    research:"Research (planned)", memory_palace:"Memory palace (sibling)", discovery:"Discovery"
+  };
+  var FAM_ORDER = ["canon","cognitive","lived_os","research","memory_palace","discovery"];
+  var REPOS = [
+    {name:"mind-intelligence-systems",family:"canon",role:"umbrella-canon",status:"live"},
+    {name:"human-mind-intelligence-system",family:"cognitive",role:"schemas · ontology · prediction",status:"live"},
+    {name:"agentic-mind-os",family:"lived_os",role:"personal mind OS (daily)",status:"live"},
+    {name:"starlight-mind-os-pro",family:"lived_os",role:"premium distribution",status:"live"},
+    {name:"research-intelligence-os",family:"research",role:"research runtime",status:"planned"},
+    {name:"psychology-research-intelligence-system",family:"research",role:"psychology vertical",status:"planned"},
+    {name:"neuroscience-research-intelligence-system",family:"research",role:"neuroscience vertical",status:"planned"},
+    {name:"bless",family:"memory_palace",role:"Blessing Protocol",status:"live"},
+    {name:"mind-palace-agent-skills",family:"memory_palace",role:"blessing skills",status:"live"},
+    {name:"frankx-mind-palace",family:"memory_palace",role:"blessed work as data",status:"live"},
+    {name:"awesome-mind-agent-skills",family:"discovery",role:"the front door",status:"live"}
+  ];
+  var layers = document.getElementById("layers");
+  FAM_ORDER.forEach(function(fam){
+    var repos = REPOS.filter(function(r){return r.family===fam});
+    if(!repos.length) return;
+    var wrap=document.createElement("div"); wrap.className="layer";
+    wrap.innerHTML='<p class="layer-name" style="color:var(--'+fam+')">'+FAM[fam]+"</p>";
+    var cards=document.createElement("div"); cards.className="cards";
+    repos.forEach(function(r){
+      var c=document.createElement("div"); c.className="card"; c.style.borderLeftColor="var(--"+fam+")";
+      c.innerHTML='<div class="nm">'+r.name+'</div><div class="ro">'+r.role+'</div>'+
+        '<div class="st '+(r.status==="planned"?"planned":"")+'">'+r.status+"</div>";
+      cards.appendChild(c);
+    });
+    wrap.appendChild(cards); layers.appendChild(wrap);
+  });
+
+  // 12-construct ring
+  var C = ["attention","memory","emotion","motivation","identity","learning","belief","behavior","consciousness","metacognition","decision-making","social-cognition"];
+  var E = [
+    ["attention","memory","gates"],["attention","consciousness","gates"],
+    ["memory","learning","feeds"],["memory","identity","feeds"],["memory","belief","feeds"],
+    ["learning","belief","modulates"],["learning","behavior","modulates"],
+    ["emotion","motivation","modulates"],["emotion","attention","modulates"],["emotion","memory","modulates"],["emotion","decision-making","modulates"],
+    ["motivation","behavior","feeds"],["motivation","decision-making","feeds"],
+    ["belief","decision-making","modulates"],["belief","behavior","modulates"],
+    ["decision-making","behavior","feeds"],["behavior","learning","feeds"],
+    ["identity","behavior","modulates"],["identity","motivation","modulates"],
+    ["metacognition","attention","reflects-on"],["metacognition","memory","reflects-on"],["metacognition","learning","reflects-on"],["metacognition","decision-making","reflects-on"],
+    ["consciousness","metacognition","feeds"],
+    ["social-cognition","identity","feeds"],["social-cognition","belief","modulates"],["social-cognition","behavior","modulates"],["social-cognition","emotion","modulates"]
+  ];
+  var COL={gates:"var(--gates)",feeds:"var(--feeds)",modulates:"var(--modulates)","reflects-on":"var(--reflects-on)"};
+  var NS="http://www.w3.org/2000/svg",svg=document.getElementById("ring");
+  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  var cx=210,cy=210,R=140,pos={};
+  C.forEach(function(id,i){var a=(i/C.length)*Math.PI*2-Math.PI/2;pos[id]={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a),a:a};});
+  E.forEach(function(e){
+    var p=pos[e[0]],q=pos[e[1]],mx=(p.x+q.x)/2,my=(p.y+q.y)/2;
+    svg.appendChild(el("path",{d:"M"+p.x+","+p.y+" Q"+(mx+(cx-mx)*.3)+","+(my+(cy-my)*.3)+" "+q.x+","+q.y,
+      class:"edge",stroke:COL[e[2]],"stroke-width":1.3}));
+  });
+  C.forEach(function(id){
+    var p=pos[id],out=Math.cos(p.a)>=0?1:-1;
+    svg.appendChild(el("circle",{cx:p.x,cy:p.y,r:5,fill:"#cdd3e0"}));
+    var t=el("text",{x:p.x+out*9,y:p.y+3,class:"node-label","text-anchor":out>=0?"start":"end"});
+    t.textContent=id;svg.appendChild(t);
+  });
+  var lg=document.getElementById("legend");
+  Object.keys(COL).forEach(function(t){
+    var k=document.createElement("span");k.className="k";
+    k.innerHTML='<span class="sw" style="border-color:'+COL[t]+'"></span>'+t;lg.appendChild(k);
+  });
+  document.getElementById("foot").textContent="11 repos · 6 families · 12 constructs · 28 edges · Built on SIP. Source of truth: repo-mesh.yaml + models/human-mind/.";
+})();
+</script>
+</body>
+</html>
