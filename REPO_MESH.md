@@ -28,7 +28,7 @@
       │   MEMORY PALACE (sibling)     │      │        DISCOVERY             │
       │ mind-palace-agent-skills      │      │ awesome-mind-agent-skills    │
       │ frankx-mind-palace            │◀─────│  the curated front door      │
-      │  (Blessing Protocol)          │      │  to the whole swarm          │
+      │ (ritual + method of loci)     │      │  to the whole swarm          │
       └──────────────────────────────┘      └──────────────────────────────┘
 
                   All nodes are  ⟶  Built on SIP (Starlight Intelligence Protocol)
@@ -42,7 +42,7 @@
 | **Cognitive** | The human-mind model and its engineered build | `human-mind-intelligence-system` |
 | **Lived OS** | Personal OS run daily + premium distribution | `agentic-mind-os`, `starlight-mind-os-pro` |
 | **Research** | Research runtime + domain verticals *(planned)* | `research-intelligence-os`, `research-intelligence-systems`, `psychology-research-intelligence-system`, `neuroscience-research-intelligence-system` |
-| **Memory Palace** | The Blessing-Protocol practice (sibling sub-family) | `mind-palace-agent-skills`, `frankx-mind-palace` |
+| **Memory Palace** | The Blessing-Protocol ritual + method-of-loci technique (sibling sub-family) | `mind-palace-agent-skills`, `frankx-mind-palace` |
 | **Discovery** | The curated map / front door | `awesome-mind-agent-skills` |
 
 ## Dependency flows
@@ -56,8 +56,10 @@
 - The **research** family is the portfolio's growth direction: a reusable runtime
   (`research-intelligence-os`) plus domain verticals. These are referenced as **planned**
   nodes — named and reserved, not yet built here.
-- The **memory-palace** sub-family runs the [Blessing Protocol](https://github.com/frankxai/bless)
-  and is coherent on its own; it connects to the rest of the swarm through the discovery map.
+- The **memory-palace** sub-family carries two registers in one repo
+  (`mind-palace-agent-skills`): the [Blessing Protocol](https://github.com/frankxai/bless) ritual,
+  and the method-of-loci mnemonic technique for both human learners and AI agents. Both are
+  coherent on their own; the family connects to the rest of the swarm through the discovery map.
 - `awesome-mind-agent-skills` links to every node above and is the recommended first stop.
 
 ## Status legend

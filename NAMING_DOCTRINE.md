@@ -43,6 +43,14 @@ Every node in the portfolio answers to exactly one of three roles. Pick one; do 
   Blessing-Protocol** practice — a sibling sub-family, named for the ritual, not the cognitive
   model. Keep the two registers distinct. (`mind-palace-agent-skills` is memory-palace, despite
   the `mind-` prefix.)
+  - **A third register lives inside that same repo, and it is not a naming violation.**
+    As of its Memory Palace suite (2026-06), `mind-palace-agent-skills` also implements the
+    literal historical **method of loci** — a mnemonic *technique* (spatial encoding + retrieval
+    practice), not the Blessing ritual and not `human-mind-intelligence-system`'s cognitive-science
+    model. It is the most etymologically correct occupant of the `palace` name of the three. Treat
+    `mind-palace-agent-skills` as spanning two registers under one roof — ritual (Blessing) and
+    technique (method of loci) — rather than force method-of-loci into either the ritual or the
+    cognitive-model box. See its own README for the split.
 - **Files inside a repo** follow the same spirit: a file named `attention.md` is a model
   module; a file named `CANON.md` is a governance declaration. Name by function.
 

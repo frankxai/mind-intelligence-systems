@@ -2,8 +2,8 @@
 # Canonical mesh for the Mind Intelligence Systems portfolio.
 # Machine-readable source of truth. Any coding agent entering the swarm reads this first.
 
-version: "0.2.0"
-updated: "2026-06-18"
+version: "0.2.1"
+updated: "2026-07-05"
 
 umbrella: "mind-intelligence-systems"
 
@@ -13,7 +13,7 @@ families:
   cognitive:    "The human-mind model and its engineered implementation"
   lived_os:     "Personal OS run daily + its premium distribution"
   research:     "Cross-domain research runtime + domain verticals"
-  memory_palace: "The Blessing-Protocol memory-palace practice (sibling sub-family)"
+  memory_palace: "The Blessing-Protocol ritual AND the method-of-loci mnemonic technique (sibling sub-family, two registers)"
   discovery:    "The curated front door to the swarm"
 
 repos:
@@ -94,7 +94,7 @@ repos:
     role: "skill-pack"
     status: "live"
     depends_on: ["bless"]
-    provides: ["blessing-skills", "palace-build"]
+    provides: ["blessing-skills", "palace-build", "method-of-loci", "spaced-repetition", "agent-memory"]
 
   - name: "frankx-mind-palace"
     family: "memory_palace"
