@@ -35,7 +35,7 @@ Without this repo, each sibling would name things independently, model the mind 
 | **[agentic-mind-os](https://github.com/frankxai/agentic-mind-os)** | lived OS | Personal mind / second-brain OS — lived daily | live |
 | **[starlight-mind-os-pro](https://github.com/frankxai/starlight-mind-os-pro)** | lived OS | Premium distribution: dashboards, onboarding, workshops | live |
 | **[awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills)** | discovery | Curated discovery layer and ecosystem map | live |
-| **[mind-palace-agent-skills](https://github.com/frankxai/mind-palace-agent-skills)** | memory palace | Blessing-Protocol skills — ingest · witness · grow | live |
+| **[mind-palace-agent-skills](https://github.com/frankxai/mind-palace-agent-skills)** | memory palace | Blessing-Protocol skills (ingest · witness · grow) **+** the method-of-loci suite (design · encode · recall · agent-memory) | live |
 | **[frankx-mind-palace](https://github.com/frankxai/frankx-mind-palace)** | memory palace | Frank's blessed work as data (the lived practice) | live |
 | **[research-intelligence-os](https://github.com/frankxai/research-intelligence-os)** | research | Reusable research runtime: contracts, templates, evals | planned |
 | **[research-intelligence-systems](https://github.com/frankxai/research-intelligence-systems)** | research | Cross-domain research portfolio layer | planned |
@@ -43,9 +43,14 @@ Without this repo, each sibling would name things independently, model the mind 
 | **[neuroscience-research-intelligence-system](https://github.com/frankxai/neuroscience-research-intelligence-system)** | research | Neuroscience vertical: BIDS, NWB, MNE pipelines | planned |
 
 The swarm spans two sub-families under one umbrella: the **cognitive** track (model → engineered
-system → lived OS → research) and the sibling **memory-palace** track (the
-[Blessing Protocol](https://github.com/frankxai/bless)). See [ARCHITECTURE.md](./ARCHITECTURE.md)
-for the layered diagram and [REPO_MESH.md](./REPO_MESH.md) for explicit dependency flows.
+system → lived OS → research) and the sibling **memory-palace** track — which itself carries two
+registers: the [Blessing Protocol](https://github.com/frankxai/bless) ritual, and the literal
+method-of-loci mnemonic technique (design a palace, encode vivid images, recall on a schedule,
+give agents persistent spatial memory). Both registers live in
+[mind-palace-agent-skills](https://github.com/frankxai/mind-palace-agent-skills); see
+[NAMING_DOCTRINE.md](./NAMING_DOCTRINE.md) for why that's not a naming violation. See
+[ARCHITECTURE.md](./ARCHITECTURE.md) for the layered diagram and [REPO_MESH.md](./REPO_MESH.md)
+for explicit dependency flows.
 
 ---
 

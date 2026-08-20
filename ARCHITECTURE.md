@@ -18,7 +18,7 @@ Lived OS                agentic-mind-os             (personal, daily)
 Premium Distribution    starlight-mind-os-pro       (onboarding, dashboards, workshops)
 
 Research (planned)      research-intelligence-os → psychology / neuroscience verticals
-Memory Palace (sibling) mind-palace-agent-skills + frankx-mind-palace   (Blessing Protocol)
+Memory Palace (sibling) mind-palace-agent-skills + frankx-mind-palace   (Blessing Protocol + method of loci)
 Discovery               awesome-mind-agent-skills   (the front door)
 ```
 
@@ -31,10 +31,12 @@ The swarm holds two distinct registers — kept distinct on purpose (see
    engineered System that turns it into schemas, a lived OS that runs on those schemas, and a
    research wing that grounds the constructs in evidence. This is the "understand and operate
    cognition" track.
-2. **The memory-palace family** runs the [Blessing Protocol](https://github.com/frankxai/bless):
-   a weekly ritual of witnessing finished work and growing a navigable palace from it. It is
-   named for the *practice* (memory palace), not the cognitive model, and is coherent on its
-   own. It is the "reflect and keep what is whole" track.
+2. **The memory-palace family** carries two registers under one roof, both living in
+   `mind-palace-agent-skills`: the [Blessing Protocol](https://github.com/frankxai/bless) — a
+   weekly ritual of witnessing finished work and growing a navigable palace from it — and the
+   literal **method of loci**, the historical mnemonic technique (design a palace, encode vivid
+   images, recall on a schedule, give agents persistent spatial memory). Neither is the cognitive
+   model. It is the "reflect and keep what is whole" + "remember, deliberately" track.
 
 Discovery (`awesome-mind-agent-skills`) is the one place that links both.
 
