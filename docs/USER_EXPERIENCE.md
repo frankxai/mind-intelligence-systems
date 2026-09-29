@@ -48,7 +48,7 @@ The mind model in `models/human-mind/` keeps the vocabulary the agents use — a
 
 ## Journey 2 — Academic Researcher
 
-> **Status:** `research-intelligence-os` and the psychology and neuroscience systems are `planned` in `repo-mesh.yaml`. This journey describes the intended workflow, not a shipped one.
+> **Status:** `research-intelligence-os` and the psychology and neuroscience systems are marked `planned` in `repo-mesh.yaml`. This journey is the intended workflow and has not been checked against those repos' current contents.
 
 **Goal**: Run structured literature reviews, synthesize evidence across studies, map psychological constructs, and build reusable research workflows.
 
