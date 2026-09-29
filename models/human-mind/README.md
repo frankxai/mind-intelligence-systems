@@ -1,7 +1,14 @@
-# 🌟 Human Mind Model • Integrated Canon v3 (Founder-Aligned)
+# Human mind model
 
-Per current doctrine (see screenshots & NAMING_DOCTRINE): This is the **primary living location**. No premature separate repo fragmentation.
+The shared ontology of the twelve constructs lives here, in one file per construct:
+attention, memory, emotion, motivation, identity, learning, belief, behavior,
+consciousness, metacognition, decision-making, and social-cognition. Each module is
+written to be read by people and imported into agent prompts.
 
-The shared ontology lives here. Every module is dual-read (human + agent). Aligned to lived OS, engineered systems, portfolio thinking. Cross-leverages all frankxai empire: Arcanea creative mythic agents, Starlight guardians, GenCreator intelligence surfaces, family protection, multi-agent coding excellence.
+The model stays in this repo rather than a separate one; `ROADMAP.md` lists extraction
+as a v1.0 option. `human-mind-intelligence-system` turns each module into a JSON schema.
 
-**Elevated Guardrail**: Pure modeling, augmentation, hypothesis, evidence, sovereignty tools. Never clinical. Always protects imagination, family, truth-seeking, and empire-building.
+**Guardrail:** the model describes and structures cognition. It is never clinical and
+never diagnoses. Observation, interpretation, hypothesis, evidence, and decision stay
+separate, and the Research Notes in each module are pointers to theories and authors,
+not claims that any one theory is settled.
