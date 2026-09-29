@@ -42,7 +42,7 @@
 | **Cognitive** | The human-mind model and its engineered build | `human-mind-intelligence-system` |
 | **Lived OS** | Personal OS run daily + premium distribution | `agentic-mind-os`, `starlight-mind-os-pro` |
 | **Research** | Research runtime + domain verticals *(planned)* | `research-intelligence-os`, `research-intelligence-systems`, `psychology-research-intelligence-system`, `neuroscience-research-intelligence-system` |
-| **Memory Palace** | The Blessing-Protocol ritual + method-of-loci technique (sibling sub-family) | `mind-palace-agent-skills`, `frankx-mind-palace` |
+| **Memory Palace** | The Blessing-Protocol ritual + method-of-loci technique (sibling sub-family) | `bless`, `mind-palace-agent-skills`, `frankx-mind-palace` |
 | **Discovery** | The curated map / front door | `awesome-mind-agent-skills` |
 
 ## Dependency flows
