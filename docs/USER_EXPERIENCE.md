@@ -19,34 +19,36 @@ This document describes how different types of people encounter and use the Mind
 
 ## Journey 1 — Personal Practitioner
 
-**Goal**: Build a personal second brain that understands your mind, supports learning, and tracks your development over time.
+**Goal**: Build a personal second brain that organizes your notes by construct, supports learning, and keeps a record of what you write over time.
 
 ### Onboarding
 
-1. Clone or install [Agentic Mind OS](https://github.com/frankxai/agentic-mind-os) following its `INSTALL.md`.
-2. Open the vault template and fill in your `profile.md` — current focus areas, active projects, cognitive strengths and weaknesses.
-3. Run the first mind-cartographer session: the agent will ask structured questions about your attention, motivation, and current learning load, drawing vocabulary from `models/human-mind/`.
-4. Review the generated mind map of your cognitive state.
+1. Clone [Agentic Mind OS](https://github.com/frankxai/agentic-mind-os) and follow the quick start in its README.
+2. Copy `vault-templates/` to `~/mind-vault` and open it as your vault.
+3. After a few days of daily notes, run `/map-mind`. The mind-cartographer agent sorts what you wrote across the twelve constructs, using vocabulary from `models/human-mind/`.
+4. Review the map note it writes to `reviews/`. It is a reading of your notes, not an assessment.
 
 ### Daily Use
 
-- **Morning**: Open your Agentic Mind OS vault. Run the daily-focus agent to identify where your attention should go given current projects and energy levels.
-- **During work**: Capture notes in the structured format the system provides. Notes are tagged by cognitive domain (belief updates, new memory traces, emotional state shifts).
-- **Evening**: Run the consolidation agent to process the day's captures into durable memory entries and surface patterns.
+- **Morning**: Open your vault. Run `/dawn` for the priming prompts, or ask the focus-coach agent to set up your next work block.
+- **During work**: Capture notes in the daily template and tag the constructs each note touches on the `constructs::` line.
+- **Evening**: Run `/dusk` for the reflection prompts. Patterns across days surface in the weekly `/review-week`.
 
 ### Weekly Use
 
-- Run the weekly review agent: it synthesizes daily notes, highlights belief shifts, flags motivation dips, and proposes next-week focus areas.
-- Review the learning log — what you practiced, what consolidated, what's at risk of decay.
-- Check the emotion/motivation trend chart (if using Starlight Mind OS Pro dashboards).
+- Run `/review-week`: the weekly-reviewer agent consolidates the week's notes by construct, names learnings, and proposes one to three carry-forwards.
+- Review the recall sets the recall-builder writes to `reviews/` for anything you want to keep.
+- If you use Starlight Mind OS Pro, its dashboard specs describe a weekly-review view and a construct-coverage view. The specs ship without running dashboards or sample data.
 
 ### What the Swarm Provides Behind the Scenes
 
-The mind model in `models/human-mind/` ensures that the vocabulary the agents use — attention, consolidation, implementation intentions, appraisal — is consistent with research-grounded definitions. When you use the psychology research system later, you won't need to re-learn a different vocabulary.
+The mind model in `models/human-mind/` keeps the vocabulary the agents use — attention, consolidation, implementation intentions, appraisal — consistent across repos, and each module points to the research it draws on. The planned psychology research system is meant to reuse the same vocabulary.
 
 ---
 
 ## Journey 2 — Academic Researcher
+
+> **Status:** `research-intelligence-os` and the psychology and neuroscience systems are marked `planned` in `repo-mesh.yaml`. This journey is the intended workflow and has not been checked against those repos' current contents.
 
 **Goal**: Run structured literature reviews, synthesize evidence across studies, map psychological constructs, and build reusable research workflows.
 
@@ -101,19 +103,19 @@ The mind model in `models/human-mind/` ensures that the vocabulary the agents us
 
 ## Journey 4 — Premium User (Starlight Mind OS Pro)
 
-**Goal**: Get a guided, curated experience on top of Agentic Mind OS with polished dashboards, onboarding workshops, and commercial templates.
+**Goal**: Get a guided path on top of Agentic Mind OS: onboarding, dashboard specs, workshop outlines, and commercial templates.
 
 ### Onboarding
 
 1. Access the Starlight Mind OS Pro onboarding pack from [its repo](https://github.com/frankxai/starlight-mind-os-pro).
-2. Follow the 7-day onboarding workshop: each day introduces one cognitive domain from the mind model (attention, memory, emotion, motivation, identity, learning, metacognition).
-3. Install the dashboard templates into your vault.
+2. Follow the first-7-days onboarding: each day is one small action mapped to a step of the core loop (capture, daily review, weekly review).
+3. Use the dashboard specs in `dashboards/` to build views over your vault. The repo ships specs, not running dashboards.
 
 ### Ongoing Use
 
-- Weekly dashboard review: see your cognitive domain scores, learning streaks, emotion trends.
-- Access curated workshops on topics like "deep focus protocol" or "belief revision practice".
-- Use the premium agent skills catalog — higher-fidelity versions of the base agents.
+- Weekly dashboard review: the spec describes a cadence strip, a follow-through line, and the themes the agent surfaced. It shows no scores or grades.
+- Workshops: a half-day outline, "Build Your Mind OS", for live or self-paced delivery.
+- Commercial templates: a client-onboarding checklist for practitioners who set up the core for others.
 
 ---
 
@@ -139,4 +141,4 @@ No — start with your target repo. This repo is the governance layer, not the e
 No — it is a descriptive/research model for structuring agent prompts and organizing knowledge. It does not diagnose. See the guardrails in `models/human-mind/README.md`.
 
 **"Each repo works alone."**
-Some do (Agentic Mind OS has standalone value), but they are significantly more powerful when connected. The research systems depend on Research Intelligence OS for their runtime, and all agents are more coherent when they share the vocabulary from `models/human-mind/`.
+Some do (Agentic Mind OS runs on its own). Connected repos share one vocabulary from `models/human-mind/`. The planned research systems depend on Research Intelligence OS for their runtime.

@@ -16,7 +16,7 @@ This repo is the **canon layer** — not a product itself, but the source of tru
 
 ## Purpose
 
-This is the highest node in a swarm of eight repositories. Its job is threefold:
+This is the highest node in the swarm that `repo-mesh.yaml` maps: 12 repositories, 8 live and 4 planned. Its job is threefold:
 
 1. **Name things correctly.** The [Naming Doctrine](./NAMING_DOCTRINE.md) defines what OS, System, and Systems mean across the portfolio and prevents drift as repos multiply.
 2. **Hold the shared model.** `models/human-mind/` contains the modular ontology of cognition, affect, and behavior that every agent in the swarm can import as ground truth.
@@ -35,6 +35,7 @@ Without this repo, each sibling would name things independently, model the mind 
 | **[agentic-mind-os](https://github.com/frankxai/agentic-mind-os)** | lived OS | Personal mind / second-brain OS — lived daily | live |
 | **[starlight-mind-os-pro](https://github.com/frankxai/starlight-mind-os-pro)** | lived OS | Premium distribution: dashboards, onboarding, workshops | live |
 | **[awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills)** | discovery | Curated discovery layer and ecosystem map | live |
+| **[bless](https://github.com/frankxai/bless)** | memory palace | The Blessing Protocol: the open standard for the weekly witnessing practice | live |
 | **[mind-palace-agent-skills](https://github.com/frankxai/mind-palace-agent-skills)** | memory palace | Blessing-Protocol skills (ingest · witness · grow) **+** the method-of-loci suite (design · encode · recall · agent-memory) | live |
 | **[frankx-mind-palace](https://github.com/frankxai/frankx-mind-palace)** | memory palace | Frank's blessed work as data (the lived practice) | live |
 | **[research-intelligence-os](https://github.com/frankxai/research-intelligence-os)** | research | Reusable research runtime: contracts, templates, evals | planned |
